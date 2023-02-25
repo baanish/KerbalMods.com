@@ -5,26 +5,28 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to KerbalMods.com">
 	<main>
-		<div class="header">
+		<!-- Centre the items within the header div -->
+		<div class="header"  style= "display:flexbox; justify-content:center; align-items: center; text-align: center;">
 			<h1 class="logo"><span class="logo1">Kerbal</span><span class="logo2">Mods.com</span></h1>
 			<p>
 				The site is still under construction! 👷<br />
 				Stay tuned for updates as we work towards providing a seamless modding exprience.<br />
 			</p>
+			<div style= "display:flex; justify-content:center; align-items: center">
 			<ul>
 				<Card
 					href="https://discord.gg/3hYJ8MbAQM"
 					title="KerbalMods.com Discord"
 					body="Follow current development on KerbalMods.com."
 				/>
-			</ul>
-			<ul>
+				<br />
 				<Card
 					href="https://discord.gg/hHW5gpHxfE"
 					title="Modding Discord"
 					body="Follow the current progress of all KSP2 modding."
 				/>
 			</ul>
+			</div>
 		</div>
 	</main>
 </Layout>
