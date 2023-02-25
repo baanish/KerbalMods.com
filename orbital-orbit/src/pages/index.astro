@@ -5,63 +5,52 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to KerbalMods.com">
 	<main>
-		<h1>Welcome to <span class="text-gradient">KerbalMods.com</span></h1>
-		<p class="WIP">
-			The site is still a work in progress, but we are working on it! 👷<br />
-			Stay tuned for updates as we work towards providing a seamless user experience for all KSP2 modders and players.<br />
-			Meanwhile please head over to the Modding Discord for now.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://discord.gg/hHW5gpHxfE"
-				title="Modding Discord"
-				body="The place to go for the current progress of KSP2 modding."
-			/>
-		</ul>
+		<!-- Centre the items within the header div -->
+		<div class="header"  style= "display:flexbox; justify-content:center; align-items: center; text-align: center;">
+			<h1 class="logo"><span class="logo1">Kerbal</span><span class="logo2">Mods.com</span></h1>
+			<p>
+				The site is still under construction! 👷<br />
+				Stay tuned for updates as we work towards providing a seamless modding exprience.<br />
+			</p>
+			<div style= "display:flex; justify-content:center; align-items: center">
+			<ul>
+				<Card
+					href="https://discord.gg/3hYJ8MbAQM"
+					title="KerbalMods.com Discord"
+					body="Follow current development on KerbalMods.com."
+				/>
+				<br />
+				<Card
+					href="https://discord.gg/hHW5gpHxfE"
+					title="Modding Discord"
+					body="Follow the current progress of all KSP2 modding."
+				/>
+			</ul>
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+	* {
+		font-family: 'Lato', sans-serif;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	
+	.logo1 {
+		font-weight: 900;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.logo2 {
+		font-weight: 400;
 	}
-	.WIP {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	.header {
+		padding: 40px;
 	}
-	.WIP code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.WIP strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
+
+	ul {
 		padding: 0;
 	}
 </style>
