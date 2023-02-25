@@ -24,6 +24,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: orbital-orbit # TODO: replace with Deno Deploy project name
+          project: lerbal-mods # TODO: replace with Deno Deploy project name
           entrypoint: server/entry.mjs
           root: orbital-orbit/dist
